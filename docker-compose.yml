@@ -7,7 +7,7 @@ services:
   api:
     depends_on:
       - db_api
-    build: ./easytourAPI
+    build: ./easytourApi
     ports:
       - "8001:80"
     links:
