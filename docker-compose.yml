@@ -1,13 +1,13 @@
 version: '2'
 services:
   web:
-    build: ./easyTourWEB
+    build: ./easytourWeb
     ports:
       - "8000:80"
   api:
     depends_on:
       - db_api
-    build: ./easyTourAPI
+    build: ./easytourAPI
     ports:
       - "8001:80"
     links:
