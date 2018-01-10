@@ -629,7 +629,7 @@
     <script>
       $(document).ready(function () {
         $.ajax({
-                 url: 'http://easytourbrasil.com.br/adminApi/api/dashboardAdmin',
+                 url: 'http://35.185.9.68:8001/api/dashboardAdmin',
                  type: 'GET',
                  dataType: 'json',
                  success: function (data, textStatus, xhr) {

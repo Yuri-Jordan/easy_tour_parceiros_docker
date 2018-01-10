@@ -68,7 +68,7 @@
         $(document).ready(function () {
 
           $.ajax({
-                   url: 'http://easytourbrasil.com.br/adminApi/api/parceiros',
+                   url: 'http://35.185.9.68:8001/api/parceiros',
                    type: 'GET',
                    dataType: 'json',
                    success: function (data, textStatus, xhr) {
@@ -115,7 +115,7 @@
         function enviar(id){
 
           $.ajax({
-            url: 'http://easytourbrasil.com.br/adminApi/api/parceiros/'+id,
+            url: 'http://35.185.9.68:8001/api/parceiros/'+id,
             type: 'POST',
             data: {
                     nome_fantasia:document.getElementById('nome_fantasia'+id).value,
@@ -159,7 +159,7 @@
 
               case "excluir":
                 $.ajax({
-                  url: 'http://easytourbrasil.com.br/adminApi/api/parceiros/'+id,
+                  url: 'http://35.185.9.68:8001/api/parceiros/'+id,
                   type: 'DELETE',
                   dataType: 'json',
                   success: function (data, textStatus, xhr) {
