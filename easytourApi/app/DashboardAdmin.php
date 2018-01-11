@@ -35,7 +35,7 @@ class DashboardAdmin extends Model
 
     public function calcularVariacaoPercentual()
     {
-      $dataAtual = Carbon::today("BRT");
+      $dataAtual = Carbon::today();
       $qtdParceirosCadastradosAteSemanaAnterior = Parceiro::where('created_at', '<=', $dataAtual->subWeeks(1))->count();
       $qtdParceirosCadastradosAteHoje = Parceiro::all()->count();
       return ($qtdParceirosCadastradosAteHoje - $qtdParceirosCadastradosAteSemanaAnterior)/$qtdParceirosCadastradosAteSemanaAnterior*100;
