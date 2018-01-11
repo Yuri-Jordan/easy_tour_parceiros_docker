@@ -1,5 +1,4 @@
 version: '2'
-command: RUN chmod 777 -R /var/www/html
 services:
   web:
     depends_on:
