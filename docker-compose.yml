@@ -4,9 +4,6 @@ services:
     depends_on:
       - api
     build: ./easytourWeb
-    networks:
-      mynet:
-        ipv4_address: 172.25.0.4
     ports:
       - "8000:80"
     volumes:
