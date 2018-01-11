@@ -36,7 +36,8 @@ services:
       LC_ALL: C
 
 networks:
-  driver: bridge
+  driver:
+    - bridge
   ipam:
     config:
     - subnet: 172.25.0.0/24
