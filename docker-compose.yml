@@ -4,6 +4,9 @@ services:
     depends_on:
       - api
     build: ./easytourWeb
+    networks:
+      mynet:
+        ipv4_address: 172.25.0.4
     ports:
       - "8000:80"
     volumes:
@@ -12,6 +15,9 @@ services:
     depends_on:
       - db_api
     build: ./easytourApi
+    networks:
+      mynet:
+        ipv4_address: 172.25.0.2
     ports:
       - "8001:80"
     volumes:
@@ -21,6 +27,9 @@ services:
 
   db_api:
     image: postgres:9.6
+    networks:
+      mynet:
+        ipv4_address: 172.25.0.3
     ports:
       - "5444:5432"
     environment:
@@ -28,3 +37,10 @@ services:
       POSTGRES_PASSWORD: 123456
       POSTGRES_DB: easytourbrasil
       LC_ALL: C
+
+networks:
+  mynet:
+    driver: bridge
+    ipam:
+      config:
+      - subnet: 172.25.0.0/24
