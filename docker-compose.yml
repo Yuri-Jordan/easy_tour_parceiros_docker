@@ -10,7 +10,7 @@ services:
     ports:
       - "8000:80"
     volumes:
-      - "./:/var/www/html"
+      - ./:/var/www/html
   api:
     depends_on:
       - db_api
