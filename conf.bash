@@ -7,6 +7,6 @@ sudo chmod 777 -R easytourWeb/bootstrap/cache
 
 sudo docker-compose up -d
 
-sudo docker 'exec' -it easytourapi bash #!/usr/bin/env bash
+sudo docker $( printf 'exec' ) -it easytourapi bash #!/usr/bin/env bash
 php artisan migrate
 'exit'
