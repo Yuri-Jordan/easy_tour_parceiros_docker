@@ -1,7 +1,5 @@
 #!/bin/bash
 
-cd easy_tour_parceiros_docker
-
 sudo chmod 777 -R easytourApi/storage
 sudo chmod 777 -R easytourApi/bootstrap/cache
 sudo chmod 777 -R easytourWeb/storage
