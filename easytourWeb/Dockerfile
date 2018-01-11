@@ -3,22 +3,22 @@ FROM php:7.1-apache
 MAINTAINER Masashi Shinbara <shin1x1@gmail.com>
 
 # Install PHP extensions
-RUN apt-get update && apt-get install -y \
-      libicu-dev \
-      libpq-dev \
-      libmcrypt-dev \
-    && rm -r /var/lib/apt/lists/* \
-    && docker-php-ext-configure pdo_mysql --with-pdo-mysql=mysqlnd \
-    && docker-php-ext-install \
-      intl \
-      mbstring \
-      mcrypt \
-      pcntl \
-      pdo_mysql \
-      pdo_pgsql \
-      pgsql \
-      zip \
-      opcache
+#RUN apt-get update && apt-get install -y \
+#      libicu-dev \
+#      libpq-dev \
+#      libmcrypt-dev \
+#    && rm -r /var/lib/apt/lists/* \
+#    && docker-php-ext-configure pdo_mysql --with-pdo-mysql=mysqlnd \
+#    && docker-php-ext-install \
+#      intl \
+#      mbstring \
+#      mcrypt \
+#      pcntl \
+#      pdo_mysql \
+#      pdo_pgsql \
+#      pgsql \
+#      zip \
+#      opcache
 
 # Install Xdebug
 #RUN curl -fsSL 'https://xdebug.org/files/xdebug-2.4.0.tgz' -o xdebug.tar.gz \
