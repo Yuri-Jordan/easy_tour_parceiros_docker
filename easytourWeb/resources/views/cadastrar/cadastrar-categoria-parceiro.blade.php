@@ -33,7 +33,7 @@
             </div>
             <div class="x_content">
 
-              <form class="form-horizontal form-label-left" novalidate id="form" action="http://35.185.9.68:8001/api/categoriaParceiros" method="post">
+              <form class="form-horizontal form-label-left" novalidate id="form" action="http://35.190.171.94:8001/api/categoriaParceiros" method="post">
 
                 <div class="item form-group">
                   <label class="control-label col-md-3 col-sm-3 col-xs-12" for="nome">Nome <span class="required">*</span> </label>

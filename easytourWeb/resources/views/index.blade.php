@@ -629,7 +629,7 @@
     <script>
       $(document).ready(function () {
         $.ajax({
-                 url: 'http://35.185.9.68:8001/api/dashboardAdmin',
+                 url: 'http://35.190.171.94:8001/api/dashboardAdmin',
                  type: 'GET',
                  dataType: 'json',
                  success: function (data, textStatus, xhr) {
