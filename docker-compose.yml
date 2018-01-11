@@ -12,6 +12,8 @@ services:
       - "8000:80"
     volumes:
       - ./easytourWeb:/var/www/html
+    container_name: easytourweb
+
   api:
     depends_on:
       - db_api
@@ -25,6 +27,7 @@ services:
       - "./easytourApi:/var/www/html"
     links:
       - db_api
+    container_name: easytourapi
 
   db_api:
     image: postgres:9.6
@@ -38,6 +41,7 @@ services:
       POSTGRES_PASSWORD: 123456
       POSTGRES_DB: easytourbrasil
       LC_ALL: C
+    container_name: easytourdb
 
 networks:
   mynet:
