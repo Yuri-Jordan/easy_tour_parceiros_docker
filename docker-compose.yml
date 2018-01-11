@@ -1,6 +1,5 @@
 version: '3'
-pre-command: sudo chmod 777 -R easytourWeb/storage
-pre-command: sudo chmod 777 -R easytourApi/storage
+
 services:
   web:
     depends_on:
