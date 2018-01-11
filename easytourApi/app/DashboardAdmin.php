@@ -37,8 +37,14 @@ class DashboardAdmin extends Model
     {
       $dataAtual = Carbon::today();
       $qtdParceirosCadastradosAteSemanaAnterior = Parceiro::where('created_at', '<=', $dataAtual->subWeeks(1))->count();
-      $qtdParceirosCadastradosAteHoje = Parceiro::all()->count();
-      return ($qtdParceirosCadastradosAteHoje - $qtdParceirosCadastradosAteSemanaAnterior)/$qtdParceirosCadastradosAteSemanaAnterior*100;
+
+      if($qtdParceirosCadastradosAteSemanaAnterior == 0){
+        return 0;
+      }else{
+        $qtdParceirosCadastradosAteHoje = Parceiro::all()->count();
+        return ($qtdParceirosCadastradosAteHoje - $qtdParceirosCadastradosAteSemanaAnterior)/$qtdParceirosCadastradosAteSemanaAnterior*100;
+      }
+    
     }
 
 }
