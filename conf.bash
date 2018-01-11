@@ -7,7 +7,6 @@ sudo chmod 777 -R easytourWeb/bootstrap/cache
 
 sudo docker-compose up -d
 
-comando="sudo docker exec -it easytourapi bash"
-exec $comando
+sh -c 'sudo docker exec -it easytourapi bash'
 php artisan migrate
 'exit'
