@@ -1,4 +1,4 @@
-#!/bin/bash
+﻿#!/bin/bash
 # Dá permissões à estas pastas pra o Servidor
 sudo chmod 777 -R easytourApi/storage
 sudo chmod 777 -R easytourApi/bootstrap/cache

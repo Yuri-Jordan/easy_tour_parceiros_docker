@@ -9,7 +9,7 @@ services:
       mynet:
         ipv4_address: 172.25.0.4
     ports:
-      - "8000:80"
+      - "80:80"
     volumes:
       - ./easytourWeb:/var/www/html
     container_name: easytourweb
