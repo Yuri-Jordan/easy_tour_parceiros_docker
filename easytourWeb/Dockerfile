@@ -42,7 +42,7 @@ MAINTAINER Masashi Shinbara <shin1x1@gmail.com>
 COPY apache2-laravel.conf /etc/apache2/sites-available/laravel.conf
 RUN a2dissite 000-default.conf && a2ensite laravel.conf && a2enmod rewrite
 
-COPY ./ /var/www/html
+# COPY ./ /var/www/html
 # RUN chmod 777 -R /var/www/html
 
 # COPY php.ini /usr/local/etc/php/php.ini

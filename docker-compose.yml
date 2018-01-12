@@ -11,7 +11,9 @@ services:
     ports:
       - "80:80"
     volumes:
-      - ./easytourWeb:/var/www/html
+      - ./easytourbrasil-site:/var/www/html
+      - ./easytourWeb:/var/www/html/admin
+      - ./easytourWeb/apache2-laravel.conf:/etc/apache2/sites-available/laravel.conf
     container_name: easytourweb
 
   api:
