@@ -6,3 +6,6 @@ sudo chmod 777 -R easytourWeb/storage
 sudo chmod 777 -R easytourWeb/bootstrap/cache
 
 sudo docker-compose up -d
+
+idContainer=$(sudo docker ps -aqf "name=easytourapi")
+sudo docker exec $idContainer php artisan migrate
